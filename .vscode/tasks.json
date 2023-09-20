@@ -1,0 +1,28 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+        "type": "shell",
+        "label": "Best: Compile Bakend", 
+        "command": "cd ./backend; npm run compile",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+    },
+    {
+      "type": "shell",
+      "label": "Best: Run Frontend Phone",
+      "command": "cd ./frontend; npm start",
+      "group": "build"
+    },
+    {
+      "type": "shell",
+      "label": "Best: Run Frontend Web",
+      "command": "cd ./frontend; npm run web",
+      "group": "build"
+    }
+  ]
+}
