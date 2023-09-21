@@ -2,6 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import morgan from "morgan";
 import mongoose from "mongoose";
+import cors from "cors"
 import "dotenv/config";
 
 const app = express();
@@ -9,6 +10,7 @@ const app = express();
 // Middlewares
 app.use(bodyParser.json());
 app.use(morgan("tiny"));
+app.use(cors())
 
 const api = process.env.API_VERSION;
 
